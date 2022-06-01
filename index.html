@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Maven+Pro&display=swap" rel="stylesheet" />
+        <title>Document</title>
+
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            main {
+                width: 600px;
+                height: 300px;
+                display: grid;
+                grid-template-columns: repeat(4, 150px);
+                grid-template-rows: repeat(2, 150px);
+                position: relative;
+            }
+
+            .box1 {
+                color: aquamarine;
+                background: rgb(245, 47, 47);
+                grid-row: 1/2;
+                grid-column: 2/3;
+                position: absolute;
+                width: 150px;
+                aspect-ratio: 1/1;
+                transition-duration: 1s;
+                border-radius: 15px;
+            }
+            .box2 {
+                background: green;
+                position: absolute;
+                width: 150px;
+                aspect-ratio: 1/1;
+                grid-column: 3/4;
+                transition-duration: 1s;
+                border-radius: 15px;
+            }
+            .box3 {
+                background: blueviolet;
+                position: absolute;
+                width: 150px;
+                aspect-ratio: 1/1;
+                grid-row: 2/3;
+                grid-column: 2/3;
+                transition-duration: 1s;
+                border-radius: 15px;
+            }
+            .box4 {
+                background: lightcoral;
+                position: absolute;
+                aspect-ratio: 1/1;
+                width: 150px;
+                grid-row: 2/3;
+                grid-column: 3/4;
+                transition-duration: 1s;
+                border-radius: 15px;
+            }
+            h1 {
+                position: absolute;
+                top: 110px;
+                left: 250px;
+                color: cornflowerblue;
+                font-family: 'Maven Pro', sans-serif;
+            }
+
+            main:hover .box1 {
+                transform: translateX(-100%) rotateZ(90deg);
+            }
+            main:hover .box2 {
+                transform: translateX(100%) rotateZ(-90deg);
+            }
+            main:hover .box3 {
+                transform: translateX(-100%) rotateZ(-90deg);
+            }
+            main:hover .box4 {
+                transform: translateX(100%) rotateZ(90deg);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>hello</h1>
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+        </main>
+    </body>
+</html>
